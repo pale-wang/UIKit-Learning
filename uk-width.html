@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/uikit.min.css"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/uikit.min.js"></script>
+    <script src="./js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <div class="uk-text-center" uk-grid>
+        <div class="uk-width-1-3">
+            <div class="uk-card uk-card-default uk-card-body">1-3</div>
+        </div>
+        <div class="uk-width-1-3">
+            <div class="uk-card uk-card-default uk-card-body">1-3</div>
+        </div>
+        <div class="uk-width-1-3">
+            <div class="uk-card uk-card-default uk-card-body">1-3</div>
+        </div>
+    </div>
+    <div class="uk-text-center" uk-grid>
+        <div class="uk-width-1-2">1-2</div>
+        <div class="uk-width-1-2">1-2</div>
+    </div>
+    <div class="uk-grid">
+        <div class="uk-width-1-4">1-4</div>
+        <div class="uk-width-3-4">3-4</div>
+    </div>
+
+    <div uk-grid>
+        <div class="uk-width-auto">
+            <div class="uk-card uk-card-default uk-card-body">Auto</div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+        </div>
+    </div>
+
+    <!-- 这段代码显示出来是:上面Expand, 下面Auto. uk-grid只对直属的子元素有效果 -->
+    <div uk-grid>
+        <div class="uk-width-auto">
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+            <div class="uk-card uk-card-default uk-card-body">Auto</div>
+        </div>
+    </div>
+
+    <!-- 这段代码可以正常显示为在一行的左边Expand 右边为Auto,也印证了uk-grid只对直接子元素有效果-->
+    <div uk-grid>
+        <div class="uk-width-auto" uk-grid>
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+            <div class="uk-card uk-card-default uk-card-body">Auto</div>
+        </div>
+    </div>
+
+    <!-- 切分为四个相同的子元素 -->
+    <div class="uk-child-width-1-4" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+    </div>
+
+
+    <div class="uk-child-width-expand uk-grid-small uk-text-center" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+        </div>
+    </div>
+
+    <div uk-grid>
+        <div class="uk-width-small">
+            <div class="uk-card uk-card-default uk-card-body">
+                small Width Item
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">
+                Expanded Item
+            </div>
+        </div>
+    </div>
+    <div uk-grid>
+        <div class="uk-width-medium">
+            <div class="uk-card uk-card-default uk-card-body">
+                medium Width Item
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">
+                Expanded Item
+            </div>
+        </div>
+    </div>
+    <div uk-grid>
+        <div class="uk-width-large">
+            <div class="uk-card uk-card-default uk-card-body">
+                large Width Item
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">
+                Expanded Item
+            </div>
+        </div>
+    </div>
+    <div uk-grid>
+        <div class="uk-width-xlarge">
+            <div class="uk-card uk-card-default uk-card-body">
+                xlarge Width Item
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">
+                Expanded Item
+            </div>
+        </div>
+    </div>
+    <div uk-grid>
+        <div class="uk-width-xxlarge">
+            <div class="uk-card uk-card-default uk-card-body">
+                xxlarge Width Item
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-card uk-card-default uk-card-body">
+                Expanded Item
+            </div>
+        </div>
+    </div>
+
+    <!-- mix .uk-child-width-* with .uk-width-* -->
+    <div class="uk-child-width-expand" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+        </div>
+        <div class="uk-width-1-3">
+           <div class="uk-card uk-card-default uk-card-body">1-3</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Expand</div>
+        </div>
+    </div>
+
+    <!-- responsive layout -->
+    <div class="uk-grid-match uk-text-center" uk-grid>
+        <div class="uk-width-1-2@m">
+            <div class="uk-card uk-card-default uk-card-body">1-2@m</div>
+        </div>
+        <div class="uk-width-1-4@m">
+            <div class="uk-card uk-card-default uk-card-body">1-4@m</div>
+        </div>
+        <div class="uk-width-1-4@m">
+            <div class="uk-card uk-card-default uk-card-body">1-4@m</div>
+        </div>
+
+        <!-- 下面这个5等分结构,在m及以上的设备中切分为1:1:3 在l及以上的设备中切分为1:2-->
+        <div class="uk-width-1-5@m uk-hidden@l">
+            <div class="uk-card uk-card-default uk-card-body">1-5@m<br>hidden@l</div>
+        </div>
+        <div class="uk-width-1-5@m uk-width-1-3@l">
+            <div class="uk-card uk-card-default uk-card-body">1-5@m<br>1-3@l</div>
+        </div>
+        <div class="uk-width-3-5@m uk-width-2-3@l">
+            <div class="uk-card uk-card-default uk-card-body">3-5@m<br>2-3@l</div>
+        </div>
+    </div>
+</body>
+</html>
